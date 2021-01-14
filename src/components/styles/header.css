@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 15vh;
+    background-color: #293250;
+    display: flex;
+    justify-content: space-around;    
+}
+
+.home_click a {
+    height: 15vh;
+    text-decoration: none;
+    color: #ffd55a;
+    font-size: 13vh;
+}
+
+.chs_category {
+    height: 7vh;
+    width: 100px;
+
+    margin: 5vh;
+    background-color: #ffd55a;
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    
+}
