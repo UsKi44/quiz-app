@@ -6,20 +6,25 @@ const easyApi = "https://opentdb.com/api.php?amount=10&difficulty=easy"
 function Quiz() {
     
     const [questions, setQuestions] = useState([]);
-
     useEffect(() => {
-        fetch(easyApi)
+        let parsedUrl = window.location.search.toLowerCase();
+        fetch(`https://opentdb.com/api.php?amount=10&${parsedUrl.replace('?', '')}&type=multiple`)
             .then(res => res.json())
             .then((data)=> {
                 setQuestions(data.results);
+                console.log(data)
             });
-    })
+            console.log("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple");
+            console.log(`https://opentdb.com/api.php?amount=10&${parsedUrl.replace('?', '')}&type=multiple`);
+            // https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple
+    },[]);
+    // Quiz.js:16 ?difficulty=Medium?category=15
 
     return questions.length > 0 ? (
         
         <div className="background">
-            {/* <div className="quest_div">
-                <p>Here will be a question</p>
+             <div className="quest_div">
+                <p>{questions[0].question}</p>
             </div>
             <div className="answers">
                 <div className="part1">
@@ -30,7 +35,7 @@ function Quiz() {
                     <button className="answ3" id="answ3">{questions[1].incorrect_answers}</button>
                     <button className="answ4" id="answ4">{questions[2].incorrect_answers}</button>
                 </div>
-            </div> */}
+            </div> 
         </div>
         ) : (
             <h1>Loading...</h1>

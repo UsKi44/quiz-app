@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import Quiz from "./Quiz";
 import "./styles/body.css";
 import { Link } from 'react-router-dom';
 
@@ -9,8 +8,9 @@ import { Link } from 'react-router-dom';
 function Body() {
 
     const [categories, setCategories] = useState([]);
-    const [select, setSelect] = useState('');
+    const [select, setSelect] = useState(9);
     const [questions, setQuestions] = useState([]);
+    const [difficulty, setDifficulty] = useState('easy');
 
     const categoryUrl = "https://opentdb.com/api_category.php";
 
@@ -51,18 +51,18 @@ function Body() {
                             })
                             
                         }
-
+                        
                     </select>
                 </label>
                 <label htmlFor="difficulty" className="difficulty_container" id="difficulty">
-                    <select name="difficulty" className="difficulty_selector" id="difficultySelector" >
+                    <select name="difficulty" className="difficulty_selector" id="difficultySelector" onChange={(e) => setDifficulty(e.target.value)} >
                         <option>Easy</option>
                         <option>Medium</option>
                         <option>Hard</option>  
                     </select>
                 </label>
                 {/* <Link to="/Quiz"  className="button_link"> */}
-                    <Link to="/Quiz" className="button_link" >
+                    <Link to={`/Quiz?category=${select}&difficulty=${difficulty}`}  className="button_link" >
                         <button className="start" id="startGame" >
                             Start Game     
                         </button>
