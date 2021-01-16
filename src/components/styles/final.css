@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContent {
+    height: 85vh;
+    width: 100%;
+
+    background-color:  #6dd47e;
+
+    display: grid;
+    justify-content: center;
+}
+
+.mainContent h1 {
+    margin: auto;
+}
+
+.finalButton {
+    height: 10vh;
+    width: 30vw;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #ffd55a;
+
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}

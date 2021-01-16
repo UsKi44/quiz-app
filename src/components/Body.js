@@ -66,9 +66,7 @@ function Body() {
                         <button className="start" id="startGame" >
                             Start Game     
                         </button>
-                    </Link>    
-                    
-                {/* </Link> */}
+                    </Link>
             </div>
 
             

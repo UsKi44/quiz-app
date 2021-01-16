@@ -20,7 +20,7 @@ body {
     background-color: #ffd55a;
 
     margin: auto;
-    margin-top: 150px;
+    margin-top: 0;
     align-items: center;
 
     border-radius: 10px;
@@ -28,8 +28,8 @@ body {
 
 .quest_div p {
     font-size: 20px;
-    padding-left: 20px;
-    
+    padding-top: 20px;
+    padding-left: 20px;    
 }
 
 .answers {
@@ -38,13 +38,11 @@ body {
     margin-top: -100px;  
 }
 
-.answers div {
-    display: grid;
-}
+
 
 .answers button {
     height: 50px;
-    width: 30vw;
+    width: 20vw;
 
     margin-left: 20px;
     margin-top: 10px;
@@ -54,6 +52,7 @@ body {
     
     cursor:pointer;
     outline: none;
+    background-color: whitesmoke;
 }
 
 
@@ -61,3 +60,26 @@ body {
     margin-left: -20px;
 }
 
+.correct {
+    background-color: green !important;
+}
+
+
+
+.incorrect {
+    background-color: red !important;
+}
+
+.statInfo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.questNumb {
+    margin-right: 50px;
+}
+
+.points {
+
+}

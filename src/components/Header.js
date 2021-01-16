@@ -4,11 +4,13 @@ import "./styles/header.css"
 
 function Header() {
     return (
-        <div className="header">
+        <nav>
+            <div className="header">
             <div className="home_click">
-                <a href="#">
+                <Link to="/Header">
                     Quiz
-                </a>
+                </Link>
+                
                 
             </div>
             <Link to="/choose">
@@ -16,6 +18,8 @@ function Header() {
             </Link>
             
         </div>
+        </nav>
+        
     );
 }
 
